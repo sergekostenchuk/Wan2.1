@@ -1,0 +1,21 @@
+build:
+  python_packages:
+    - torch==2.4.0
+    - diffusers>=0.30.0
+    - transformers>=4.44.0
+    - accelerate>=0.33.0
+    - xformers>=0.0.27
+    - opencv-python
+    - pillow
+    - numpy
+    - av
+  cuda_version: "12.1"
+  system_packages:
+    - ffmpeg
+    - git-lfs
+
+env:
+  PYTORCH_CUDA_ALLOC_CONF: "expandable_segments:True"
+  CUDA_VISIBLE_DEVICES: "0"
+  TRANSFORMERS_CACHE: "/tmp"
+  HF_HOME: "/tmp"
